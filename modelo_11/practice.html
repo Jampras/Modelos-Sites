@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | O Salão Literário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a332a',      /* Deep Pine Green */
+                        secondary: '#b87333',    /* Antique Brass / Copper */
+                        background: '#d1d7d0',   /* Muted Sage Green */
+                        surface: '#e1e6e0',      /* Lighter Sage */
+                        'on-background': '#2d4036', 
+                        'on-surface': '#1a332a',    
+                    },
+                    fontFamily: {
+                        serif: ['"Libre Baskerville"', 'serif'],
+                    },
+                    boxShadow: {
+                        'book': '-10px 0 30px rgba(26, 51, 42, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a332a;
+            --secondary: #b87333;
+            --background: #d1d7d0;
+            --surface: #e1e6e0;
+        }
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: var(--background);
+            color: var(--primary);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Drop Cap for Literary Feel */
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* Book Margin lines */
+        .book-margin {
+            border-left: 1px solid var(--primary);
+            border-right: 1px solid var(--primary);
+            padding: 0 2rem;
+        }
+        
+        /* Subtle Fade In */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        /* Sepia filter for all images to match Sage background */
+        .img-library {
+            filter: sepia(0.3) saturate(0.8) hue-rotate(-10deg);
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 1024px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--background);
+                border-top: 1px solid var(--primary);
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--primary);
+                font-size: 0.65rem;
+                text-decoration: none;
+                gap: 0.25rem;
+                opacity: 0.6;
+            }
+            .mobile-nav a.active {
+                color: var(--secondary);
+                opacity: 1;
+            }
+            body {
+                padding-bottom: 70px;
+            }
+            .book-margin {
+                border: none;
+                padding: 0;
+            }
+        }
+        
+        /* Elegant Underline Button */
+        .btn-link {
+            position: relative;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+        .btn-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary);
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-out;
+        }
+        .btn-link:hover::after {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    
+    <nav class="w-full bg-surface/95 backdrop-blur-sm border-b border-primary/10 fixed top-0 z-50 p-6 lg:px-12 lg:py-6">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+            
+            <a href="index.html" class="flex flex-col">
+                <span class="text-2xl font-bold tracking-tight">Helena Vasconcelos.</span>
+                <span class="text-xs italic text-on-background mt-1">Biblioteca Privada</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-10 items-center text-sm font-bold">
+                <a href="practice.html" class="hover:text-secondary transition-colors">O Acervo Prático</a>
+                <a href="philosophy.html" class="hover:text-secondary transition-colors">A Autora</a>
+                <a href="insights.html" class="hover:text-secondary transition-colors">Leituras</a>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary italic hover:opacity-80 transition-opacity">
+                    Agendar Sessão no Gabinete ⟶
+                </a>
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <main class="pt-40 pb-20 fade-in px-6 lg:px-16">
+        <div class="max-w-3xl mx-auto">
+            
+            <h1 class="text-5xl font-bold mb-16 text-center">Catálogo de <i class="text-secondary">Especialidades.</i></h1>
+            
+            <div class="space-y-16">
+                <!-- Item -->
+                <div class="flex gap-8 group cursor-pointer" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                    <div class="text-4xl font-bold text-secondary/30 pt-2">01</div>
+                    <div class="border-b border-primary/20 pb-16">
+                        <h3 class="text-3xl font-bold mb-4 group-hover:text-secondary transition-colors">Engenharia Sucessória</h3>
+                        <p class="text-base leading-loose text-on-background mb-6">
+                            Redação de testamentos, doações em vida e usufruto. Desenhamos o mapa completo para que a transição do seu patrimônio ocorra em absoluto silêncio e paz, longe de tribunais barulhentos.
+                        </p>
+                        <span class="text-xs uppercase tracking-widest font-bold">Solicitar Audiência</span>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="flex gap-8 group cursor-pointer" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                    <div class="text-4xl font-bold text-secondary/30 pt-2">02</div>
+                    <div class="border-b border-primary/20 pb-16">
+                        <h3 class="text-3xl font-bold mb-4 group-hover:text-secondary transition-colors">Constituição de Holdings</h3>
+                        <p class="text-base leading-loose text-on-background mb-6">
+                            Proteção de bens através de estruturas societárias fechadas (Cofres Familiares). Otimização tributária monumental aliada a regras claras de governança para as próximas gerações.
+                        </p>
+                        <span class="text-xs uppercase tracking-widest font-bold">Solicitar Audiência</span>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="flex gap-8 group cursor-pointer" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                    <div class="text-4xl font-bold text-secondary/30 pt-2">03</div>
+                    <div class="border-b border-primary/20 pb-16">
+                        <h3 class="text-3xl font-bold mb-4 group-hover:text-secondary transition-colors">Acordos Pré-Nupciais</h3>
+                        <p class="text-base leading-loose text-on-background mb-6">
+                            Discutir o fim no início é o maior ato de respeito ao patrimônio e ao parceiro. Acordos escritos com diplomacia para que o foco da união permaneça sempre nos sentimentos, não nas finanças.
+                        </p>
+                        <span class="text-xs uppercase tracking-widest font-bold">Solicitar Audiência</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    
+    <footer class="bg-primary text-surface mt-32">
+        <div class="max-w-[1400px] mx-auto py-24 px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <div class="book-margin border-surface/20">
+                <h3 class="text-3xl font-bold mb-6 text-secondary">
+                    O conhecimento protege.
+                </h3>
+                <p class="font-normal text-sm text-surface/80 leading-loose max-w-sm mb-12">
+                    A advocacia mais elegante é aquela que resolve o litígio na ponta da caneta, não na espada.
+                </p>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary italic hover:text-surface transition-colors">
+                    Solicitar audiência privada ⟶
+                </a>
+            </div>
+            
+            <div class="flex flex-col md:items-end justify-between text-sm text-surface/60 space-y-6">
+                <ul class="space-y-4 md:text-right">
+                    <li><a href="practice.html" class="hover:text-secondary transition-colors">Catálogo de Serviços</a></li>
+                    <li><a href="philosophy.html" class="hover:text-secondary transition-colors">Biografia da Sócia</a></li>
+                    <li><a href="insights.html" class="hover:text-secondary transition-colors">Publicações</a></li>
+                </ul>
+                <div class="md:text-right text-xs">
+                    <p class="mb-2">Gabinete de São Paulo: Av. Faria Lima, 1234</p>
+                    <p>© 2026 Vasconcelos. Todos os direitos de edição reservados.</p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">menu_book</span>
+            Índice
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">bookmark_added</span>
+            Prática
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">local_library</span>
+            Leituras
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">forum</span>
+            Gabinete
+        </a>
+    </div>
+
+</body>
+</html>

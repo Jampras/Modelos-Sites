@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | Portfólio Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2A2320',      /* Deep Espresso */
+                        secondary: '#D4A373',    /* Cashmere Camel */
+                        background: '#FDFBF7',   /* Soft Warm Ivory */
+                        surface: '#F4EFEA',      /* Cashmere Stone */
+                        'on-background': '#4A403A',
+                        'on-surface': '#2A2320',
+                    },
+                    fontFamily: {
+                        headline: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #2A2320;
+            --secondary: #D4A373;
+            --background: #FDFBF7;
+            --surface: #F4EFEA;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background);
+            color: #4A403A;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--background);
+                box-shadow: 0 -4px 20px rgba(42, 35, 32, 0.08);
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+                border-top: 1px solid rgba(212, 163, 115, 0.2);
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #4A403A;
+                font-size: 0.75rem;
+                text-decoration: none;
+                gap: 0.3rem;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+            }
+            .mobile-nav a.active {
+                color: var(--secondary);
+                opacity: 1;
+                transform: translateY(-2px);
+            }
+            body {
+                padding-bottom: 80px;
+            }
+        }
+        
+        /* Soft, cozy imagery */
+        .img-cozy {
+            filter: sepia(0.2) contrast(0.9) brightness(0.95);
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    <nav class="fixed w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-28">
+                <a href="index.html" class="flex flex-col">
+                    <span class="font-headline text-2xl font-medium text-primary tracking-wide">Helena Vasconcelos</span>
+                    <span class="text-[0.65rem] uppercase tracking-[0.3em] text-secondary font-bold mt-1">Estratégia & Patrimônio</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="practice.html" class="text-sm tracking-wide hover:text-secondary transition-colors">Portfólio de Atuação</a>
+                    <a href="philosophy.html" class="text-sm tracking-wide hover:text-secondary transition-colors">A Sócia</a>
+                    <a href="insights.html" class="text-sm tracking-wide hover:text-secondary transition-colors">Artigos & Ideias</a>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 ml-4 px-7 py-3 bg-primary text-background text-sm tracking-wider rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 shadow-md">
+                        <span class="material-symbols-outlined text-[18px]">forum</span> Fale Comigo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <!-- Asymmetric Hero Section -->
+        <section class="pt-40 pb-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 relative">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
+                    
+                    <!-- Left Content -->
+                    <div class="w-full lg:w-5/12 z-10 fade-in-up">
+                        <h1 class="font-headline text-5xl md:text-7xl text-primary leading-[1.1] mb-8 relative">
+                            Soluções<br>
+                            <span class="italic text-secondary">com empatia,</span><br>
+                            rigor e clareza.
+                            <div class="absolute -left-8 top-4 w-1 h-32 bg-secondary/30 rounded-full hidden md:block"></div>
+                        </h1>
+                        <p class="text-lg leading-relaxed mb-10 max-w-md font-light text-on-background/80">
+                            Bem-vindo ao meu portfólio digital. Aqui, o direito perde a frieza institucional e ganha a proximidade de uma conversa franca, focada no que realmente importa: a sua paz de espírito.
+                        </p>
+                        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-background rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 shadow-xl shadow-primary/10">
+                            <span class="material-symbols-outlined">forum</span>
+                            Falar via WhatsApp
+                        </a>
+                    </div>
+                    
+                    <!-- Right Asymmetric Image Grid -->
+                    <div class="w-full lg:w-7/12 relative fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="absolute inset-0 bg-surface rounded-[40px] transform rotate-3 scale-105 -z-10"></div>
+                        <div class="grid grid-cols-2 gap-4 relative z-10">
+                            <div class="space-y-4 pt-12">
+                                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded-[30px] rounded-tl-[80px] img-cozy shadow-lg" alt="Escritório Aconchegante">
+                                <div class="bg-surface p-8 rounded-[30px] rounded-bl-[80px] shadow-sm">
+                                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">coffee</span>
+                                    <h3 class="font-headline text-xl text-primary mb-2">Proximidade</h3>
+                                    <p class="text-sm font-light leading-relaxed">Atendimento artesanal e totalmente humanizado.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="bg-primary p-8 rounded-[30px] rounded-tr-[80px] text-background shadow-lg">
+                                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">account_balance</span>
+                                    <h3 class="font-headline text-xl mb-2">Solidez</h3>
+                                    <p class="text-sm font-light text-surface/70 leading-relaxed">Estratégias jurídicas blindadas contra incertezas.</p>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66cb85?q=80&w=600&auto=format&fit=crop" class="w-full h-80 object-cover rounded-[30px] rounded-br-[80px] img-cozy shadow-lg" alt="Estudos Jurídicos">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossos Valores / Metodologia -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                    <span class="text-secondary font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Nossa Metodologia</span>
+                    <h2 class="font-headline text-4xl md:text-5xl text-primary mb-6">Uma nova forma de advogar</h2>
+                    <p class="font-light leading-relaxed text-on-background/80 text-lg">
+                        Esqueça a linguagem inacessível e a distância protocolar. Nosso escritório foi desenhado para ser uma extensão da sua casa ou da sua empresa, um ambiente onde problemas complexos são resolvidos com diálogo e inteligência.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-surface p-10 rounded-[30px] hover:-translate-y-2 transition-transform duration-300 fade-in-up">
+                        <div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-secondary">hearing</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-4">Escuta Ativa</h3>
+                        <p class="font-light text-sm text-on-background/70 leading-relaxed">
+                            O primeiro passo nunca é falar de leis, mas sim ouvir a sua história. Compreender as dores familiares e os desafios societários é essencial para desenhar qualquer contrato.
+                        </p>
+                    </div>
+                    <div class="bg-surface p-10 rounded-[30px] hover:-translate-y-2 transition-transform duration-300 fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-secondary">verified_user</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-4">Arquitetura Jurídica</h3>
+                        <p class="font-light text-sm text-on-background/70 leading-relaxed">
+                            Não usamos modelos prontos. Cada família e cada empresa recebe uma estrutura holding ou contratual desenhada sob medida, garantindo máxima segurança e economia.
+                        </p>
+                    </div>
+                    <div class="bg-surface p-10 rounded-[30px] hover:-translate-y-2 transition-transform duration-300 fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-secondary">diversity_1</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-4">Acompanhamento Pleno</h3>
+                        <p class="font-light text-sm text-on-background/70 leading-relaxed">
+                            Nossa relação não termina quando o papel é assinado. Estamos presentes no dia a dia, guiando transições gerenciais e mediando pequenos atritos antes que virem litígios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos / Confiança -->
+        <section class="py-24 bg-primary text-background rounded-tr-[80px] rounded-bl-[80px] my-12 mx-4 lg:mx-12 overflow-hidden relative">
+            <div class="absolute inset-0 opacity-5 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10 text-center">
+                <span class="text-secondary font-bold uppercase tracking-[0.2em] text-xs mb-8 block">Histórias de Confiança</span>
+                
+                <div class="relative bg-surface/5 backdrop-blur-sm border border-secondary/10 p-12 rounded-[40px]">
+                    <span class="material-symbols-outlined text-6xl text-secondary/30 absolute top-8 left-8">format_quote</span>
+                    <p class="font-headline text-2xl md:text-3xl leading-snug mb-8 relative z-10">
+                        "Enfrentávamos uma sucessão dolorosa que estava dividindo nossa família. A Dra. Helena não trouxe apenas um contrato, mas uma mesa de diálogo. Hoje, a empresa prospera e nós voltamos a ser uma família unida."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center font-headline text-xl text-secondary">M</div>
+                        <div class="text-left">
+                            <p class="font-bold tracking-wide">M. Albuquerque</p>
+                            <p class="text-xs opacity-60 uppercase tracking-widest">Matriarca e Empresária</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Portfolio Preview -->
+        <section class="py-32 bg-surface rounded-[60px] mx-4 lg:mx-12 my-12">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 fade-in-up">
+                    <div class="max-w-2xl">
+                        <span class="text-secondary font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Meu Diário Jurídico</span>
+                        <h2 class="font-headline text-4xl md:text-5xl text-primary mb-6">Artigos & Reflexões</h2>
+                        <p class="font-light leading-relaxed text-on-background/80">
+                            Compartilho neste espaço minhas ideias sobre sucessão, gestão de patrimônio e como o direito pode ser uma ferramenta de construção de valor e aconchego familiar.
+                        </p>
+                    </div>
+                    <a href="insights.html" class="flex-shrink-0 text-primary font-medium hover:text-secondary transition-colors underline underline-offset-4 decoration-secondary/40">
+                        Ler todos os artigos
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <!-- Blog Post 1 -->
+                    <a href="insights.html" class="group block bg-background p-6 rounded-[30px] shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="w-full h-48 bg-[url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center rounded-[20px] mb-6 img-cozy group-hover:scale-[1.02] transition-transform duration-500"></div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 bg-surface text-secondary text-[0.65rem] uppercase tracking-wider font-bold rounded-full">Patrimônio</span>
+                            <span class="text-xs text-on-background/40">Ontem</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-3 group-hover:text-secondary transition-colors">A Holding Familiar como Instrumento de Paz</h3>
+                        <p class="text-sm font-light line-clamp-3 text-on-background/70">
+                            Como estruturar a sucessão de forma a evitar conflitos, garantindo que o legado da família seja preservado com harmonia e segurança jurídica.
+                        </p>
+                    </a>
+                    
+                    <!-- Blog Post 2 -->
+                    <a href="insights.html" class="group block bg-background p-6 rounded-[30px] shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="w-full h-48 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center rounded-[20px] mb-6 img-cozy group-hover:scale-[1.02] transition-transform duration-500"></div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 bg-surface text-secondary text-[0.65rem] uppercase tracking-wider font-bold rounded-full">Empresarial</span>
+                            <span class="text-xs text-on-background/40">Semana passada</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-3 group-hover:text-secondary transition-colors">Acordos de Sócios sob uma Ótica Humanizada</h3>
+                        <p class="text-sm font-light line-clamp-3 text-on-background/70">
+                            Prevenir brigas societárias vai muito além das cláusulas frias; trata-se de alinhar expectativas de vida e valores pessoais.
+                        </p>
+                    </a>
+                    
+                    <!-- Blog Post 3 -->
+                    <a href="insights.html" class="group block bg-background p-6 rounded-[30px] shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="w-full h-48 bg-[url('https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center rounded-[20px] mb-6 img-cozy group-hover:scale-[1.02] transition-transform duration-500"></div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 bg-surface text-secondary text-[0.65rem] uppercase tracking-wider font-bold rounded-full">Reflexão</span>
+                            <span class="text-xs text-on-background/40">15 Março</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-3 group-hover:text-secondary transition-colors">Por que escolhi a Advocacia Artesanal?</h3>
+                        <p class="text-sm font-light line-clamp-3 text-on-background/70">
+                            Minha transição dos grandes escritórios para um atendimento focado na proximidade e na construção de vínculos de verdadeira confiança.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-primary text-surface py-20 rounded-t-[40px] mt-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+                <h3 class="font-headline text-3xl mb-6 text-background">Um espaço de confiança.</h3>
+                <p class="text-surface/70 leading-relaxed font-light max-w-sm mb-8">
+                    Meu objetivo não é apenas resolver litígios, mas construir alicerces seguros para que você e sua empresa prosperem com tranquilidade e aconchego.
+                </p>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-secondary hover:text-background transition-colors font-medium tracking-wide">
+                    Iniciar uma conversa via WhatsApp <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            
+            <div class="md:col-span-3 md:col-start-7">
+                <h4 class="font-headline text-xl mb-6 text-background italic">Navegação</h4>
+                <ul class="space-y-4 font-light">
+                    <li><a href="index.html" class="text-surface/70 hover:text-secondary transition-colors">Início</a></li>
+                    <li><a href="practice.html" class="text-surface/70 hover:text-secondary transition-colors">Portfólio de Atuação</a></li>
+                    <li><a href="philosophy.html" class="text-surface/70 hover:text-secondary transition-colors">Minha Trajetória</a></li>
+                    <li><a href="insights.html" class="text-surface/70 hover:text-secondary transition-colors">Artigos</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-3">
+                <h4 class="font-headline text-xl mb-6 text-background italic">Contato Direto</h4>
+                <ul class="space-y-4 font-light text-surface/70">
+                    <li>(87) 99927-9050</li>
+                    <li>helena@vasconcelos.adv.br</li>
+                    <li class="pt-8 text-xs opacity-40">© 2026 Helena Vasconcelos.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">home_app_logo</span>
+            Início
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">auto_awesome_mosaic</span>
+            Portfólio
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">menu_book</span>
+            Artigos
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">forum</span>
+            WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>

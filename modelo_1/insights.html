@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | Portfólio Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2A2320',      /* Deep Espresso */
+                        secondary: '#D4A373',    /* Cashmere Camel */
+                        background: '#FDFBF7',   /* Soft Warm Ivory */
+                        surface: '#F4EFEA',      /* Cashmere Stone */
+                        'on-background': '#4A403A',
+                        'on-surface': '#2A2320',
+                    },
+                    fontFamily: {
+                        headline: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #2A2320;
+            --secondary: #D4A373;
+            --background: #FDFBF7;
+            --surface: #F4EFEA;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background);
+            color: #4A403A;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--background);
+                box-shadow: 0 -4px 20px rgba(42, 35, 32, 0.08);
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+                border-top: 1px solid rgba(212, 163, 115, 0.2);
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #4A403A;
+                font-size: 0.75rem;
+                text-decoration: none;
+                gap: 0.3rem;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+            }
+            .mobile-nav a.active {
+                color: var(--secondary);
+                opacity: 1;
+                transform: translateY(-2px);
+            }
+            body {
+                padding-bottom: 80px;
+            }
+        }
+        
+        /* Soft, cozy imagery */
+        .img-cozy {
+            filter: sepia(0.2) contrast(0.9) brightness(0.95);
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    <nav class="fixed w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-28">
+                <a href="index.html" class="flex flex-col">
+                    <span class="font-headline text-2xl font-medium text-primary tracking-wide">Helena Vasconcelos</span>
+                    <span class="text-[0.65rem] uppercase tracking-[0.3em] text-secondary font-bold mt-1">Estratégia & Patrimônio</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="practice.html" class="text-sm tracking-wide hover:text-secondary transition-colors">Portfólio de Atuação</a>
+                    <a href="philosophy.html" class="text-sm tracking-wide hover:text-secondary transition-colors">A Sócia</a>
+                    <a href="insights.html" class="text-sm tracking-wide hover:text-secondary transition-colors">Artigos & Ideias</a>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 ml-4 px-7 py-3 bg-primary text-background text-sm tracking-wider rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 shadow-md">
+                        <span class="material-symbols-outlined text-[18px]">forum</span> Fale Comigo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="pt-40 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <span class="text-secondary tracking-[0.2em] uppercase text-xs font-bold mb-6 block">Blog & Diário</span>
+            <h1 class="font-headline text-5xl md:text-6xl text-primary mb-8 leading-tight">Artigos & Ideias</h1>
+            <p class="text-xl font-light text-on-background/70 leading-relaxed mb-16">
+                Um espaço onde compartilho minhas reflexões sobre o direito humanizado, gestão de legado e as nuances das relações corporativas e familiares.
+            </p>
+            
+            <div class="space-y-12 fade-in-up text-left">
+                
+                <article class="bg-surface p-10 rounded-[40px] hover:shadow-xl transition-shadow duration-300 border border-primary/5">
+                    <span class="text-xs text-secondary font-bold uppercase tracking-widest mb-3 block">18 Março, 2026</span>
+                    <h2 class="font-headline text-3xl text-primary mb-4">A Holding Familiar como Instrumento de Paz</h2>
+                    <p class="font-light text-on-background/80 leading-relaxed mb-6">
+                        Muito se fala sobre as vantagens fiscais de uma Holding Familiar. No entanto, o seu maior valor está na capacidade de estabelecer regras claras de convivência e sucessão. Em um momento de dor e perda familiar, a ausência de discussões sobre o patrimônio é, sem dúvida, a maior herança que se pode deixar.
+                    </p>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary font-bold hover:text-primary transition-colors text-sm underline underline-offset-4">Discutir este tema comigo no WhatsApp</a>
+                </article>
+
+                <article class="bg-surface p-10 rounded-[40px] hover:shadow-xl transition-shadow duration-300 border border-primary/5">
+                    <span class="text-xs text-secondary font-bold uppercase tracking-widest mb-3 block">10 Março, 2026</span>
+                    <h2 class="font-headline text-3xl text-primary mb-4">Acordos de Sócios sob uma Ótica Humanizada</h2>
+                    <p class="font-light text-on-background/80 leading-relaxed mb-6">
+                        Prevenir brigas societárias vai muito além das cláusulas frias; trata-se de alinhar expectativas de vida e valores pessoais. O contrato não deve ser apenas uma ferramenta punitiva, mas sim um mapa de navegação que respeita os sonhos e os limites de cada sócio.
+                    </p>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary font-bold hover:text-primary transition-colors text-sm underline underline-offset-4">Discutir este tema comigo no WhatsApp</a>
+                </article>
+
+                <article class="bg-surface p-10 rounded-[40px] hover:shadow-xl transition-shadow duration-300 border border-primary/5">
+                    <span class="text-xs text-secondary font-bold uppercase tracking-widest mb-3 block">02 Março, 2026</span>
+                    <h2 class="font-headline text-3xl text-primary mb-4">Inventário Extrajudicial: Agilidade e Sigilo</h2>
+                    <p class="font-light text-on-background/80 leading-relaxed mb-6">
+                        Quando há consenso, o judiciário não precisa ser o caminho. O inventário extrajudicial em cartório oferece uma via rápida, econômica e, acima de tudo, discreta para que as famílias superem a burocracia e foquem no luto e na união.
+                    </p>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary font-bold hover:text-primary transition-colors text-sm underline underline-offset-4">Discutir este tema comigo no WhatsApp</a>
+                </article>
+
+                <article class="bg-surface p-10 rounded-[40px] hover:shadow-xl transition-shadow duration-300 border border-primary/5">
+                    <span class="text-xs text-secondary font-bold uppercase tracking-widest mb-3 block">22 Fevereiro, 2026</span>
+                    <h2 class="font-headline text-3xl text-primary mb-4">O Tabu do Acordo Prenupcial</h2>
+                    <p class="font-light text-on-background/80 leading-relaxed mb-6">
+                        Ainda visto com resistência, o acordo prenupcial é, na verdade, um dos maiores atos de amor e transparência que um casal pode ter. Ao definir as regras patrimoniais enquanto há harmonia, evita-se que o dinheiro seja motivo de disputa em eventuais crises conjugais.
+                    </p>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary font-bold hover:text-primary transition-colors text-sm underline underline-offset-4">Discutir este tema comigo no WhatsApp</a>
+                </article>
+
+                <article class="bg-surface p-10 rounded-[40px] hover:shadow-xl transition-shadow duration-300 border border-primary/5">
+                    <span class="text-xs text-secondary font-bold uppercase tracking-widest mb-3 block">05 Fevereiro, 2026</span>
+                    <h2 class="font-headline text-3xl text-primary mb-4">A Importância do Diálogo na Resolução de Conflitos</h2>
+                    <p class="font-light text-on-background/80 leading-relaxed mb-6">
+                        Antes de ajuizar uma ação, existe um vasto campo de negociação. Minha experiência mostra que 80% dos litígios empresariais podem ser resolvidos com escuta ativa e mediação qualificada, poupando anos de desgaste emocional e financeiro para os clientes.
+                    </p>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-secondary font-bold hover:text-primary transition-colors text-sm underline underline-offset-4">Discutir este tema comigo no WhatsApp</a>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="bg-primary text-surface py-20 rounded-t-[40px] mt-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+                <h3 class="font-headline text-3xl mb-6 text-background">Um espaço de confiança.</h3>
+                <p class="text-surface/70 leading-relaxed font-light max-w-sm mb-8">
+                    Meu objetivo não é apenas resolver litígios, mas construir alicerces seguros para que você e sua empresa prosperem com tranquilidade e aconchego.
+                </p>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-secondary hover:text-background transition-colors font-medium tracking-wide">
+                    Iniciar uma conversa via WhatsApp <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            
+            <div class="md:col-span-3 md:col-start-7">
+                <h4 class="font-headline text-xl mb-6 text-background italic">Navegação</h4>
+                <ul class="space-y-4 font-light">
+                    <li><a href="index.html" class="text-surface/70 hover:text-secondary transition-colors">Início</a></li>
+                    <li><a href="practice.html" class="text-surface/70 hover:text-secondary transition-colors">Portfólio de Atuação</a></li>
+                    <li><a href="philosophy.html" class="text-surface/70 hover:text-secondary transition-colors">Minha Trajetória</a></li>
+                    <li><a href="insights.html" class="text-surface/70 hover:text-secondary transition-colors">Artigos</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-3">
+                <h4 class="font-headline text-xl mb-6 text-background italic">Contato Direto</h4>
+                <ul class="space-y-4 font-light text-surface/70">
+                    <li>(87) 99927-9050</li>
+                    <li>helena@vasconcelos.adv.br</li>
+                    <li class="pt-8 text-xs opacity-40">© 2026 Helena Vasconcelos.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">home_app_logo</span>
+            Início
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">auto_awesome_mosaic</span>
+            Portfólio
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">menu_book</span>
+            Artigos
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">forum</span>
+            WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>

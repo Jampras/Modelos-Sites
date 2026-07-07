@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | Dark Luxury</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f4f4f5',      /* Platinum White */
+                        secondary: '#9c7a52',    /* Bronze / Copper */
+                        background: '#0a0a0a',   /* Obsidian Black */
+                        surface: '#121212',      /* Deep Charcoal */
+                        'on-background': '#a1a1aa', /* Zinc 400 */
+                        'on-surface': '#f4f4f5',    
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        headline: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #f4f4f5;
+            --secondary: #9c7a52;
+            --background: #0a0a0a;
+            --surface: #121212;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: #a1a1aa;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary);
+        }
+        
+        /* Slow cinematic fade in */
+        .fade-in {
+            animation: fadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 1024px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--surface);
+                border-top: 1px solid rgba(156, 122, 82, 0.2);
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--primary);
+                font-size: 0.65rem;
+                text-decoration: none;
+                gap: 0.25rem;
+                opacity: 0.4;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+            .mobile-nav a.active {
+                color: var(--secondary);
+                opacity: 1;
+            }
+            body {
+                padding-bottom: 70px;
+            }
+        }
+        
+        /* Moody, dark imagery */
+        .img-dark {
+            filter: grayscale(80%) contrast(1.2) brightness(0.6);
+        }
+        
+        /* Golden outline buttons */
+        .btn-bronze {
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            transition: all 0.5s ease;
+        }
+        .btn-bronze:hover {
+            background: var(--secondary);
+            color: var(--background);
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    
+    <nav class="w-full bg-background/90 backdrop-blur-md border-b border-secondary/20 fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-24">
+            
+            <a href="index.html" class="flex flex-col justify-center">
+                <span class="font-headline text-2xl tracking-[0.2em] uppercase text-primary leading-none">Vasconcelos</span>
+                <span class="text-[0.55rem] uppercase tracking-[0.4em] text-secondary mt-2">Blindagem & Estratégia</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-12 items-center">
+                <a href="practice.html" class="text-[0.65rem] uppercase tracking-[0.2em] text-primary/60 hover:text-secondary transition-colors">Especialidade</a>
+                <a href="philosophy.html" class="text-[0.65rem] uppercase tracking-[0.2em] text-primary/60 hover:text-secondary transition-colors">O Escritório</a>
+                <a href="insights.html" class="text-[0.65rem] uppercase tracking-[0.2em] text-primary/60 hover:text-secondary transition-colors">Doutrina</a>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="px-8 py-3 btn-bronze text-[0.65rem] uppercase tracking-[0.2em]">
+                    Consultoria Privada
+                </a>
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <main class="pt-40">
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-5xl mx-auto fade-in">
+                
+                <div class="text-center mb-24">
+                    <span class="text-[0.65rem] uppercase tracking-[0.4em] text-secondary mb-8 block">Armamento Legal</span>
+                    <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-[0.1em] text-primary mb-10">
+                        Áreas de Poder.
+                    </h1>
+                    <p class="text-sm font-light text-on-background max-w-xl mx-auto leading-loose">
+                        Foco exclusivo e cirúrgico nas esferas que protegem o seu império e a paz da sua sucessão.
+                    </p>
+                </div>
+
+                <!-- Grid de Serviços Dark -->
+                <div class="space-y-4">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-surface p-12 lg:p-16 border border-secondary/10 hover:border-secondary/50 transition-colors group">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <span class="text-4xl text-secondary font-headline">01</span>
+                            <div>
+                                <h3 class="font-headline text-3xl uppercase tracking-widest text-primary mb-6 group-hover:text-secondary transition-colors">Planejamento Sucessório</h3>
+                                <p class="font-light text-on-background leading-loose mb-8 text-sm max-w-2xl">
+                                    A transferência de poder e dinheiro nunca é simples. Desenhamos arquiteturas jurídicas rígidas que protegem a herança e anulam inventários traumáticos.
+                                </p>
+                                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary border-b border-secondary pb-1">Agendar Estratégia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-surface p-12 lg:p-16 border border-secondary/10 hover:border-secondary/50 transition-colors group">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <span class="text-4xl text-secondary font-headline">02</span>
+                            <div>
+                                <h3 class="font-headline text-3xl uppercase tracking-widest text-primary mb-6 group-hover:text-secondary transition-colors">Cofres (Holdings Familiares)</h3>
+                                <p class="font-light text-on-background leading-loose mb-8 text-sm max-w-2xl">
+                                    Criação de estruturas societárias intransponíveis para centralização, blindagem lícita e gestão multigeracional do patrimônio familiar.
+                                </p>
+                                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary border-b border-secondary pb-1">Agendar Estratégia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-surface p-12 lg:p-16 border border-secondary/10 hover:border-secondary/50 transition-colors group">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <span class="text-4xl text-secondary font-headline">03</span>
+                            <div>
+                                <h3 class="font-headline text-3xl uppercase tracking-widest text-primary mb-6 group-hover:text-secondary transition-colors">Contencioso de Elite</h3>
+                                <p class="font-light text-on-background leading-loose mb-8 text-sm max-w-2xl">
+                                    Quando a mediação falha, entramos no tribunal. Assumimos litígios societários de alta complexidade com inteligência processual implacável.
+                                </p>
+                                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary border-b border-secondary pb-1">Agendar Estratégia</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-surface border-t border-secondary/10 py-32 px-6 lg:px-12 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            
+            <span class="font-headline text-4xl tracking-[0.2em] uppercase text-primary mb-6 block">Vasconcelos</span>
+            <div class="w-12 h-px bg-secondary mx-auto mb-10"></div>
+            
+            <p class="text-on-background font-light max-w-xl mx-auto leading-relaxed mb-16 text-sm">
+                A verdadeira vitória legal é silenciosa. Operamos nas sombras para que o seu patrimônio brilhe em segurança absoluta. Sigilo rigoroso.
+            </p>
+            
+            <ul class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 text-[0.65rem] uppercase tracking-[0.2em] text-secondary">
+                <li><a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">WhatsApp: (87) 99927-9050</a></li>
+                <li>helena@vasconcelos.adv.br</li>
+                <li>São Paulo, SP</li>
+            </ul>
+            
+            <p class="pt-24 text-[0.55rem] text-on-background/30 uppercase tracking-[0.3em]">
+                © 2026 Vasconcelos Estratégia.
+            </p>
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">shield</span>
+            Início
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">gavel</span>
+            Poder
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">menu_book</span>
+            Doutrina
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">key</span>
+            Acesso
+        </a>
+    </div>
+
+</body>
+</html>

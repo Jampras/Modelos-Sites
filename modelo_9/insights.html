@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | Santuário Orgânico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2e241c',      /* Dark Walnut */
+                        secondary: '#c38b58',    /* Muted Ochre */
+                        background: '#e8e4db',   /* Sand / Clay */
+                        surface: '#f2efe9',      /* Lighter Sand */
+                        'on-background': '#4a3e35', /* Warm Brown */
+                        'on-surface': '#2e241c',    
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        headline: ['"Fraunces"', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 25px 50px -12px rgba(46, 36, 28, 0.08)',
+                        'glow': '0 0 40px rgba(195, 139, 88, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #2e241c;
+            --secondary: #c38b58;
+            --background: #e8e4db;
+            --surface: #f2efe9;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--primary);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Fraunces', serif;
+            color: var(--primary);
+            font-weight: 300;
+        }
+        
+        /* Organic Flow Animation */
+        .flow-up {
+            animation: flowUp 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        @keyframes flowUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Organic Shapes */
+        .arch-top {
+            border-radius: 50% 50% 0 0 / 15% 15% 0 0;
+        }
+        .arch-tall {
+            border-radius: 50vw 50vw 0 0;
+        }
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 1024px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                background-color: rgba(242, 239, 233, 0.9);
+                backdrop-filter: blur(10px);
+                border-radius: 40px;
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+                box-shadow: var(--tw-shadow-soft);
+                border: 1px solid rgba(46, 36, 28, 0.05);
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--primary);
+                font-size: 0.65rem;
+                text-decoration: none;
+                gap: 0.25rem;
+                opacity: 0.5;
+                font-weight: 500;
+            }
+            .mobile-nav a.active {
+                color: var(--secondary);
+                opacity: 1;
+            }
+            body {
+                padding-bottom: 100px;
+            }
+        }
+        
+        /* Soft Images */
+        .img-zen {
+            filter: sepia(0.1) brightness(1.05) contrast(0.95);
+        }
+        
+        /* Pill Buttons */
+        .btn-pill {
+            background-color: var(--primary);
+            color: var(--background);
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+        .btn-pill:hover {
+            background-color: var(--secondary);
+            transform: scale(1.02);
+            box-shadow: var(--tw-shadow-glow);
+        }
+        .btn-pill-outline {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+        .btn-pill-outline:hover {
+            background-color: var(--primary);
+            color: var(--background);
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    
+    <nav class="w-full bg-surface/95 backdrop-blur-md shadow-sm fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-24">
+            
+            <a href="index.html" class="flex items-center gap-4">
+                <div class="w-8 h-8 blob-shape bg-secondary/80 mix-blend-multiply"></div>
+                <span class="font-headline text-2xl tracking-wide text-primary">Helena Vasconcelos</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-12 items-center">
+                <a href="practice.html" class="text-sm font-medium text-primary hover:text-secondary transition-colors">Portfólio</a>
+                <a href="philosophy.html" class="text-sm font-medium text-primary hover:text-secondary transition-colors">A Conselheira</a>
+                <a href="insights.html" class="text-sm font-medium text-primary hover:text-secondary transition-colors">Reflexões</a>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="px-8 py-3 btn-pill text-sm font-medium">
+                    Iniciar Diálogo
+                </a>
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <main class="pt-32">
+        <section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto">
+            
+            <div class="text-center mb-24 flow-up">
+                <h1 class="font-headline text-5xl md:text-7xl mb-8">
+                    Reflexões & <i class="text-secondary">Diários.</i>
+                </h1>
+                <p class="text-lg font-light text-on-background max-w-xl mx-auto leading-loose">
+                    Pensamentos orgânicos sobre o impacto do direito na vida, nas emoções e no legado das famílias.
+                </p>
+            </div>
+
+            <!-- Grid de Artigos Soft -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 flow-up" style="animation-delay: 0.2s;">
+                
+                <!-- Post 1 -->
+                <article class="bg-surface rounded-3xl p-4 shadow-soft group cursor-pointer" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                    <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover img-zen group-hover:scale-105 transition-transform duration-1000" alt="Thumb">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <h2 class="font-headline text-2xl mb-4 group-hover:text-secondary transition-colors">A Holding como Terapia Familiar</h2>
+                        <p class="font-light text-sm text-on-background leading-relaxed mb-6 line-clamp-3">
+                            A estrutura de uma holding não serve apenas para economizar impostos. Ela organiza sentimentos e papéis dentro da família empresária.
+                        </p>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest">Ler Reflexão</span>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="bg-surface rounded-3xl p-4 shadow-soft group cursor-pointer" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                    <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover img-zen group-hover:scale-105 transition-transform duration-1000" alt="Thumb">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <h2 class="font-headline text-2xl mb-4 group-hover:text-secondary transition-colors">Acordos de Sócios sob a Ótica Humana</h2>
+                        <p class="font-light text-sm text-on-background leading-relaxed mb-6 line-clamp-3">
+                            Amarrar expectativas na paz é o segredo para que a guerra não destrua amizades e a saúde da empresa no futuro.
+                        </p>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest">Ler Reflexão</span>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="bg-surface rounded-3xl p-4 shadow-soft group cursor-pointer" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                    <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover img-zen group-hover:scale-105 transition-transform duration-1000" alt="Thumb">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <h2 class="font-headline text-2xl mb-4 group-hover:text-secondary transition-colors">O Tabu do Acordo Prenupcial</h2>
+                        <p class="font-light text-sm text-on-background leading-relaxed mb-6 line-clamp-3">
+                            Discutir o fim no começo não é pessimismo. É o ato mais seguro de amor para proteger a união contra o dinheiro.
+                        </p>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-widest">Ler Reflexão</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-surface pt-32 pb-16 px-6 lg:px-12 mt-32 arch-top">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            
+            <div class="w-16 h-16 blob-shape bg-secondary/20 mb-8 flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined">spa</span>
+            </div>
+            
+            <h3 class="font-headline text-4xl mb-6 max-w-2xl">
+                O fim da ansiedade jurídica.<br>O início da segurança familiar.
+            </h3>
+            
+            <p class="font-light text-on-background max-w-md mx-auto mb-12">
+                Advocacia humana, focada em resolver litígios complexos com a diplomacia e a paz que o seu patrimônio merece.
+            </p>
+            
+            <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="px-10 py-4 btn-pill-outline text-sm font-medium mb-24">
+                Agendar um Café Virtual
+            </a>
+            
+            <div class="w-full border-t border-primary/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-on-background/60">
+                <div class="flex gap-8">
+                    <a href="practice.html" class="hover:text-primary">Portfólio</a>
+                    <a href="philosophy.html" class="hover:text-primary">A Sócia</a>
+                    <a href="insights.html" class="hover:text-primary">Blog</a>
+                </div>
+                <p>© 2026 Helena Vasconcelos. Todos os direitos reservados.</p>
+                <p>WhatsApp: (87) 99927-9050</p>
+            </div>
+            
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">spa</span>
+            Início
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">water_drop</span>
+            Foco
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">psychology</span>
+            Reflexões
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            Falar
+        </a>
+    </div>
+
+</body>
+</html>

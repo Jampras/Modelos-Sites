@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | Herança Régia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a192f',      /* Deep Imperial Navy */
+                        secondary: '#d4af37',    /* Royal Gold */
+                        background: '#fbf9f6',   /* Ivory / Parchment */
+                        surface: '#ffffff',      /* Pure White */
+                        'on-background': '#1e293b', /* Slate */
+                        'on-surface': '#0a192f',    
+                    },
+                    fontFamily: {
+                        sans: ['"Lora"', 'serif'],
+                        headline: ['"Lora"', 'serif'],
+                    },
+                    boxShadow: {
+                        'royal': '0 20px 40px -15px rgba(10, 25, 47, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #d4af37;
+            --background: #fbf9f6;
+            --surface: #ffffff;
+        }
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--background);
+            color: var(--primary);
+            -webkit-font-smoothing: antialiased;
+            /* Subtle texture overlay for parchment feel */
+            background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23d4af37" fill-opacity="0.03" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
+        }
+        
+        /* Slow Fade & Float */
+        .fade-float {
+            animation: fadeFloat 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeFloat {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 1024px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--primary);
+                border-top: 1px solid var(--secondary);
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+                box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--background);
+                font-size: 0.65rem;
+                text-decoration: none;
+                gap: 0.25rem;
+                opacity: 0.6;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                font-family: 'Lora', serif;
+            }
+            .mobile-nav a.active {
+                color: var(--secondary);
+                opacity: 1;
+            }
+            body {
+                padding-bottom: 70px;
+            }
+        }
+        
+        /* Royal Imagery */
+        .img-royal {
+            filter: sepia(0.2) contrast(1.1) brightness(0.9);
+            border: 2px solid var(--secondary);
+            padding: 8px;
+            background: var(--surface);
+        }
+        
+        /* Classic Double Border for sections */
+        .border-double-royal {
+            border: 4px double var(--secondary);
+            padding: 2px;
+        }
+        
+        /* Elegant Gold Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: var(--primary);
+            transition: all 0.5s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-gold:hover {
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    
+    <nav class="w-full bg-background/95 backdrop-blur-sm border-b border-secondary/30 fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-24">
+            
+            <a href="index.html" class="flex flex-col items-center">
+                <span class="font-headline text-3xl text-primary tracking-widest uppercase">Vasconcelos</span>
+                <span class="text-[0.6rem] uppercase tracking-[0.3em] text-secondary mt-1 font-bold">Herança & Proteção</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-10 items-center">
+                <a href="practice.html" class="text-xs uppercase tracking-[0.2em] font-medium text-primary hover:text-secondary transition-colors">A Doutrina</a>
+                <a href="philosophy.html" class="text-xs uppercase tracking-[0.2em] font-medium text-primary hover:text-secondary transition-colors">Nossa História</a>
+                <a href="insights.html" class="text-xs uppercase tracking-[0.2em] font-medium text-primary hover:text-secondary transition-colors">Acervo Digital</a>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="px-8 py-3 btn-gold text-xs uppercase tracking-[0.2em] font-bold rounded-sm">
+                    Requerer Consultoria
+                </a>
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <main class="pt-32">
+        <!-- Royal Hero Section -->
+        <section class="min-h-[85vh] flex items-center justify-center py-20 px-6">
+            <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
+                
+                <div class="lg:w-1/2 text-center lg:text-left fade-float">
+                    <span class="text-xs uppercase tracking-[0.4em] font-bold text-secondary mb-8 block">Proteção Generacional</span>
+                    <h1 class="font-headline text-5xl md:text-7xl leading-[1.1] mb-8 text-primary">
+                        Sua herança,<br>
+                        <i class="text-primary/80">nossa tradição.</i>
+                    </h1>
+                    <p class="text-base font-light text-on-background leading-loose mb-12 max-w-lg mx-auto lg:mx-0">
+                        Instituição jurídica dedicada exclusivamente à engenharia patrimonial, acordos societários e proteção de grandes linhagens corporativas e familiares.
+                    </p>
+                    <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 btn-gold text-xs uppercase tracking-[0.2em] font-bold rounded-sm">
+                        Agendar Conselho
+                    </a>
+                </div>
+                
+                <div class="lg:w-1/2 fade-float" style="animation-delay: 0.3s;">
+                    <div class="border-double-royal">
+                        <img src="https://images.unsplash.com/photo-1577983196901-b3b95a89fb69?q=80&w=1000&auto=format&fit=crop" class="w-full aspect-[4/5] object-cover img-royal" alt="Classic Architecture">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Nossos Princípios (Cards Suntuosos) -->
+        <section class="py-32 px-6 lg:px-12 bg-primary text-background relative">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 fade-float">
+                    <span class="material-symbols-outlined text-secondary text-5xl mb-6">account_balance</span>
+                    <h2 class="font-headline text-4xl text-background">Os Três Pilares da Instituição</h2>
+                    <div class="w-16 h-px bg-secondary mx-auto mt-8"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    
+                    <!-- Col 1 -->
+                    <div class="bg-surface p-12 text-primary shadow-royal border border-secondary/30 fade-float text-center">
+                        <span class="font-headline text-2xl text-secondary block mb-6 italic">I. Sabedoria</span>
+                        <h3 class="text-lg uppercase tracking-widest font-bold mb-4">A Escuta Fina</h3>
+                        <p class="font-light text-sm leading-loose">
+                            O verdadeiro conselheiro jurídico ouve as entrelinhas. Compreendemos a dinâmica da sua família antes de redigir a primeira linha do contrato.
+                        </p>
+                    </div>
+                    
+                    <!-- Col 2 -->
+                    <div class="bg-surface p-12 text-primary shadow-royal border border-secondary/30 fade-float text-center" style="animation-delay: 0.2s;">
+                        <span class="font-headline text-2xl text-secondary block mb-6 italic">II. Arquitetura</span>
+                        <h3 class="text-lg uppercase tracking-widest font-bold mb-4">Desenho Régio</h3>
+                        <p class="font-light text-sm leading-loose">
+                            Não vendemos modelos. Cada holding, testamento ou acordo de sócios é uma obra-prima jurídica construída exclusivamente para o seu império.
+                        </p>
+                    </div>
+                    
+                    <!-- Col 3 -->
+                    <div class="bg-surface p-12 text-primary shadow-royal border border-secondary/30 fade-float text-center" style="animation-delay: 0.4s;">
+                        <span class="font-headline text-2xl text-secondary block mb-6 italic">III. Proteção</span>
+                        <h3 class="text-lg uppercase tracking-widest font-bold mb-4">A Muralha</h3>
+                        <p class="font-light text-sm leading-loose">
+                            O contrato não é o fim, é o escudo. Mantemo-nos ao seu lado na mediação diária, apagando as faíscas antes que os litígios se iniciem.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="bg-primary text-background mt-32 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
+        <div class="max-w-7xl mx-auto py-24 px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+            
+            <div>
+                <span class="font-headline text-3xl tracking-widest uppercase text-secondary mb-6 block">Vasconcelos</span>
+                <p class="font-light text-sm text-background/80 leading-loose">
+                    Fundamentados na tradição, desenhamos o futuro do seu patrimônio. Advocacia de precisão para famílias e empresas de elite.
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-secondary mb-6">Acesso Privado</h4>
+                <ul class="space-y-4 font-light text-sm text-background/80">
+                    <li><a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">Contato: (87) 99927-9050</a></li>
+                    <li>helena@vasconcelos.adv.br</li>
+                    <li>Av. Faria Lima, São Paulo</li>
+                </ul>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-secondary mb-6">Departamentos</h4>
+                <ul class="space-y-4 font-light text-sm text-background/80">
+                    <li><a href="practice.html" class="hover:text-secondary transition-colors">Engenharia Patrimonial</a></li>
+                    <li><a href="philosophy.html" class="hover:text-secondary transition-colors">Conselho de Sócios</a></li>
+                    <li><a href="insights.html" class="hover:text-secondary transition-colors">Jurisprudência Familiar</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="border-t border-secondary/20 py-8 text-center text-[0.65rem] uppercase tracking-[0.2em] text-background/50">
+            © 2026 Vasconcelos — Instituição Legal. Reservados todos os direitos.
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">account_balance</span>
+            Sede
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">gavel</span>
+            Doutrina
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">history_edu</span>
+            Acervo
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">key</span>
+            Consultoria
+        </a>
+    </div>
+
+</body>
+</html>

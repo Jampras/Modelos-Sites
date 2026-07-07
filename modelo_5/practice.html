@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena Vasconcelos | Alta Costura Monocromática</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#022c22',      /* Deep Forest Green */
+                        secondary: '#d4af37',    /* Metallic Gold */
+                        background: '#fcfbf8',   /* Soft Cream */
+                        surface: '#f3f4f1',      /* Light Sage Cream */
+                        'on-background': '#022c22', 
+                        'on-surface': '#022c22',    
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        headline: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #022c22;
+            --secondary: #d4af37;
+            --background: #fcfbf8;
+            --surface: #f3f4f1;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--primary);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+        
+        /* Dramatic Fade */
+        .fade-in-slow {
+            animation: fadeInSlow 2.5s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInSlow {
+            to { opacity: 1; }
+        }
+        
+        /* Mobile Navigation Rules */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 1024px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--background);
+                border-top: 1px solid var(--primary);
+                z-index: 50;
+                justify-content: space-around;
+                padding: 1rem 0;
+            }
+            .mobile-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--primary);
+                font-size: 0.65rem;
+                text-decoration: none;
+                gap: 0.25rem;
+                opacity: 0.4;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+            .mobile-nav a.active {
+                opacity: 1;
+                font-weight: 600;
+            }
+            body {
+                padding-bottom: 70px;
+            }
+        }
+        
+        /* High Fashion Imagery */
+        .img-editorial-bw {
+            filter: grayscale(100%) contrast(1.15);
+        }
+        
+        /* Oval Frame */
+        .frame-oval {
+            border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+        }
+        
+        /* Thin black borders for the grid look */
+        .border-fashion {
+            border-color: #000000;
+            border-width: 1px;
+        }
+    </style>
+
+</head>
+<body class="bg-background">
+    
+    
+    <nav class="w-full bg-background border-b border-fashion fixed top-0 z-50">
+        <div class="max-w-[1400px] mx-auto px-6 flex justify-between items-center h-20">
+            
+            <a href="index.html" class="flex items-center">
+                <span class="font-headline text-3xl font-bold tracking-tighter uppercase text-primary">V.</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-12 items-center">
+                <a href="practice.html" class="text-xs uppercase tracking-[0.2em] font-light text-primary hover:text-primary/50 transition-colors">Portfólio</a>
+                <a href="philosophy.html" class="text-xs uppercase tracking-[0.2em] font-light text-primary hover:text-primary/50 transition-colors">A Sócia</a>
+                <a href="insights.html" class="text-xs uppercase tracking-[0.2em] font-light text-primary hover:text-primary/50 transition-colors">Revista</a>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="px-6 py-2 border border-fashion text-xs uppercase tracking-[0.2em] font-bold hover:bg-secondary transition-colors">
+                    Fale Conosco
+                </a>
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <main class="pt-20">
+        <section class="min-h-[80vh] flex flex-col justify-center px-8 md:px-16 border-b border-fashion py-20">
+            <div class="max-w-[1400px] mx-auto w-full">
+                
+                <h1 class="font-headline text-7xl md:text-9xl tracking-tighter mb-20 fade-in-slow">
+                    Portfólio<span class="italic font-light">.</span>
+                </h1>
+
+                <!-- Lista de Serviços (Lista Editorial) -->
+                <div class="border-t border-fashion">
+                    
+                    <!-- Linha 1 -->
+                    <div class="py-12 border-b border-fashion flex flex-col md:flex-row gap-8 items-start hover:bg-secondary/20 transition-colors cursor-pointer group" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                        <div class="w-24">
+                            <span class="text-xs uppercase tracking-[0.3em] font-bold">01</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-headline text-4xl mb-4 group-hover:italic transition-all">Planejamento Sucessório</h3>
+                            <p class="font-light text-sm leading-loose max-w-2xl">
+                                Desenho de arquiteturas jurídicas rígidas que protegem a herança e anulam inventários traumáticos.
+                            </p>
+                        </div>
+                        <div class="w-12 flex justify-end items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </div>
+                    </div>
+
+                    <!-- Linha 2 -->
+                    <div class="py-12 border-b border-fashion flex flex-col md:flex-row gap-8 items-start hover:bg-secondary/20 transition-colors cursor-pointer group" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                        <div class="w-24">
+                            <span class="text-xs uppercase tracking-[0.3em] font-bold">02</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-headline text-4xl mb-4 group-hover:italic transition-all">Holdings Familiares</h3>
+                            <p class="font-light text-sm leading-loose max-w-2xl">
+                                Criação de estruturas societárias para centralização, economia tributária e blindagem de patrimônios multigeracionais.
+                            </p>
+                        </div>
+                        <div class="w-12 flex justify-end items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </div>
+                    </div>
+
+                    <!-- Linha 3 -->
+                    <div class="py-12 border-b border-fashion flex flex-col md:flex-row gap-8 items-start hover:bg-secondary/20 transition-colors cursor-pointer group" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                        <div class="w-24">
+                            <span class="text-xs uppercase tracking-[0.3em] font-bold">03</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-headline text-4xl mb-4 group-hover:italic transition-all">Acordos de Sócios</h3>
+                            <p class="font-light text-sm leading-loose max-w-2xl">
+                                Contratos claros, focados na harmonia e na prevenção de guerras societárias, definindo regras cristalinas para as empresas.
+                            </p>
+                        </div>
+                        <div class="w-12 flex justify-end items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </div>
+                    </div>
+
+                    <!-- Linha 4 -->
+                    <div class="py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-secondary/20 transition-colors cursor-pointer group" onclick="window.open('https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa.', '_blank')">
+                        <div class="w-24">
+                            <span class="text-xs uppercase tracking-[0.3em] font-bold">04</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-headline text-4xl mb-4 group-hover:italic transition-all">Pactos Prenupciais</h3>
+                            <p class="font-light text-sm leading-loose max-w-2xl">
+                                Mediação elegante de acordos que protegem expectativas na paz, blindando o patrimônio contra litígios emocionais futuros.
+                            </p>
+                        </div>
+                        <div class="w-12 flex justify-end items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-background border-t border-fashion mt-24">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2">
+            
+            <div class="p-16 border-b md:border-b-0 md:border-r border-fashion flex flex-col justify-between h-[400px]">
+                <h3 class="font-headline text-5xl md:text-7xl italic leading-none">Vasconcelos<br>Bureau</h3>
+                <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-[0.3em] font-bold underline underline-offset-8 decoration-1 hover:text-primary/50 transition-colors">
+                    Solicitar Atendimento Exclusivo
+                </a>
+            </div>
+            
+            <div class="p-16 flex flex-col justify-between h-[400px] bg-secondary/30">
+                <ul class="space-y-6 text-sm font-light uppercase tracking-widest">
+                    <li><a href="index.html" class="hover:underline underline-offset-4">Início</a></li>
+                    <li><a href="practice.html" class="hover:underline underline-offset-4">Áreas de Atuação</a></li>
+                    <li><a href="philosophy.html" class="hover:underline underline-offset-4">Sobre a Sócia</a></li>
+                    <li><a href="insights.html" class="hover:underline underline-offset-4">Revista Digital</a></li>
+                </ul>
+                <div class="text-[0.65rem] uppercase tracking-[0.3em] font-light">
+                    <p class="mb-2">WhatsApp: (87) 99927-9050</p>
+                    <p class="opacity-50">© 2026 Vasconcelos Bureau. All Rights Reserved.</p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    
+    <div class="mobile-nav">
+        <a href="index.html" class="active">
+            <span class="material-symbols-outlined">circle</span>
+            Início
+        </a>
+        <a href="practice.html">
+            <span class="material-symbols-outlined">square</span>
+            Portfólio
+        </a>
+        <a href="insights.html">
+            <span class="material-symbols-outlined">auto_stories</span>
+            Revista
+        </a>
+        <a href="https://wa.me/5587999279050?text=Olá%20Dra.%20Helena,%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">send</span>
+            Contato
+        </a>
+    </div>
+
+</body>
+</html>

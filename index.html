@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideias e Modelos - Advocacia Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..700,0..1&display=block" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Ambient background elements -->
+        <div class="ambient-bg shape-1"></div>
+        <div class="ambient-bg shape-2"></div>
+        <div class="ambient-bg shape-3"></div>
+
+        <!-- Dashboard View -->
+        <div id="dashboard" class="view active">
+            <header class="dashboard-header">
+                <div class="logo">
+                    <span class="material-symbols-outlined logo-icon">gavel</span>
+                    <h1>Ideias <span>& Modelos</span></h1>
+                </div>
+                <p>Explore a seleção de modelos premium para o projeto Helena Vasconcelos</p>
+            </header>
+            <main class="dashboard-main">
+                <div class="grid-container" id="grid-container">
+                    <!-- Cards will be injected by app.js -->
+                </div>
+            </main>
+        </div>
+
+        <!-- Viewer View -->
+        <div id="viewer" class="view">
+            <header class="viewer-header">
+                <button id="back-button" class="btn-back">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Voltar
+                </button>
+                <h2 id="viewer-title">Título do Modelo</h2>
+                <div class="viewer-actions">
+                    <div class="device-toggles">
+                        <button class="device-btn active" data-device="desktop" title="Visualização Desktop">
+                            <span class="material-symbols-outlined">desktop_windows</span>
+                        </button>
+                        <button class="device-btn" data-device="tablet" title="Visualização Tablet">
+                            <span class="material-symbols-outlined">tablet_mac</span>
+                        </button>
+                        <button class="device-btn" data-device="mobile" title="Visualização Mobile">
+                            <span class="material-symbols-outlined">smartphone</span>
+                        </button>
+                    </div>
+                    <a id="external-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-icon" title="Abrir em nova guia">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                </div>
+            </header>
+            <div class="iframe-container" id="iframe-container">
+                <iframe id="template-iframe" src="" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js" defer></script>
+</body>
+</html>

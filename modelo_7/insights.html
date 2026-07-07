@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vasconcelos &amp; Prado Advogados | Estratégia Jurídica de Elite</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "background": "#fafafa", // Light gray background for dashboard feel
+                "surface": "#ffffff",
+                "primary": "#27272a", // Very dark navy for stark contrast
+                "secondary": "#d4d4d8", // Slate gray for secondary text
+                "accent-terracotta": "#e11d48", // Vibrant terracotta dopamine hit
+                "accent-electric": "#2563eb", // Bright electric navy
+                "outline-variant": "#cbd5e1",
+                "surface-container": "#f8fafc",
+                "inverse-surface": "#1e293b",
+                "on-primary": "#ffffff",
+                "on-surface": "#1f2937",
+                "on-surface-variant": "#334155",
+                "tertiary-fixed-dim": "#e11d48", // Re-mapped for brushed gold replacements
+        },
+        "borderRadius": {
+                "DEFAULT": "0.5rem", // Crisp but slightly rounded corners for cards
+                "lg": "0.75rem",
+                "xl": "1rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1440px", // Wider for dashboard feel
+                "margin-mobile": "24px",
+                "gutter": "32px",
+                "margin-desktop": "48px",
+                "unit": "8px",
+                "section-gap": "96px"
+        },
+        "fontFamily": {
+                "label-caps": [
+                        "Hanken Grotesk"
+                ],
+                "headline-sm": [
+                        "EB Garamond"
+                ],
+                "headline-md": [
+                        "EB Garamond"
+                ],
+                "display-lg-mobile": [
+                        "EB Garamond"
+                ],
+                "display-lg": [
+                        "EB Garamond"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.15em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "24px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            color: #2563eb; /* Electric navy for icons */
+        }
+        .brushed-gold-text {
+            color: #e11d48; /* Vibrant terracotta */
+        }
+        .brushed-gold-bg {
+            background-color: #e11d48;
+        }
+        .brushed-gold-border {
+            border-color: #e11d48;
+        }
+        .ethereal-overlay {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4)); /* Darker, starker gradient */
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(203, 213, 225, 0.5); /* Crisp border */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Subtle drop shadow for dashboard feel */
+            border-radius: 0.5rem;
+        }
+        .dashboard-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .dashboard-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+            border-color: #2563eb;
+        }
+        .grid-line-bottom {
+            border-bottom: 1px solid #cbd5e1;
+        }
+        .grid-line-right {
+            border-right: 1px solid #cbd5e1;
+        }
+        .grid-line-top {
+            border-top: 1px solid #cbd5e1;
+        }
+        .grid-line-left {
+            border-left: 1px solid #cbd5e1;
+        }
+        .transition-prestige {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Custom scrollbar for dashboard feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0f2f5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+<style>
+@media (max-width: 1024px) {
+    nav:not(.fixed) > button, 
+    nav:not(.fixed) > a, 
+    nav:not(.fixed) .md\:hidden, nav:not(.fixed) .lg\:hidden,
+    .md\:hidden.text-primary {
+        display: none !important;
+    }
+}
+</style>
+
+<style>
+    /* SOBRIETY & EXCLUSIVITY OVERRIDES */
+    body {
+        font-family: 'Hanken Grotesk', sans-serif !important;
+        letter-spacing: 0.01em;
+    }
+    h1, h2, h3, h4, h5, h6, .font-headline, .font-headline-lg, .font-headline-md {
+        font-family: 'EB Garamond', serif !important;
+        letter-spacing: -0.01em;
+    }
+    /* Make all photography black and white for a premium sober look */
+    img, .bg-cover, [class*="bg-[url"] {
+        filter: grayscale(100%) contrast(1.1) !important;
+    }
+    /* Add luxurious breathing room to main sections */
+    section, main {
+        padding-top: clamp(4rem, 8vw, 8rem) !important;
+        padding-bottom: clamp(4rem, 8vw, 8rem) !important;
+    }
+    /* Soften borders for elegance */
+    * {
+        border-color: rgba(0,0,0,0.08) !important;
+    }
+    /* Override dark modes */
+    .dark {
+        color-scheme: light !important;
+    }
+</style>
+
+</head>
+<body class="bg-background font-body-md text-on-surface pb-20 md:pb-0">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 fixed bg-white/90 backdrop-blur-xl border-b border-outline-variant z-50 transition-prestige shadow-sm">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="font-headline-sm text-headline-sm tracking-tight text-primary font-semibold"><a href="index.html">
+                VASCONCELOS &amp; PRADO
+            </a></div>
+<div class="hidden md:flex items-center gap-8 bg-surface-container px-6 py-2 rounded-full border border-outline-variant/50 shadow-inner">
+<a class="font-label-caps text-label-caps uppercase tracking-[0.15em] text-accent-electric font-bold border-b-2 border-accent-electric pb-1" href="practice.html">Áreas de Atuação</a>
+<a class="font-label-caps text-label-caps uppercase tracking-[0.15em] text-secondary hover:text-accent-electric transition-colors" href="philosophy.html">Nossa Filosofia</a>
+<a class="font-label-caps text-label-caps uppercase tracking-[0.15em] text-secondary hover:text-accent-electric transition-colors" href="bureau.html">O Escritório</a>
+<a class="font-label-caps text-label-caps uppercase tracking-[0.15em] text-secondary hover:text-accent-electric transition-colors" href="reach.html">Alcance Global</a>
+<a class="font-label-caps text-label-caps uppercase tracking-[0.15em] text-secondary hover:text-accent-electric transition-colors" href="insights.html">Publicações</a>
+</div>
+<button class="font-label-caps text-label-caps uppercase tracking-[0.15em] bg-primary text-white px-6 py-2.5 rounded-md hover:bg-accent-terracotta transition-colors duration-300 shadow-md" onclick="window.location.href='mailto:contato@vasconcelosprado.adv.br'">
+                Agendar Consulta
+            </button>
+</nav>
+</header>
+<main class="pt-[76px]">
+<section class="min-h-screen px-margin-desktop pt-48 pb-32">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+<div>
+<span class="font-label-caps text-secondary uppercase tracking-[0.2em] mb-4 block">Conhecimento e Pesquisa</span>
+<h1 class="font-headline-lg text-4xl md:text-6xl text-on-surface font-light">Publicações Exclusivas</h1>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<article class="group cursor-pointer">
+<div class="w-full h-64 bg-surface-container-high mb-6 overflow-hidden">
+<img alt="Corporate structure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&amp;w=2071&amp;auto=format&amp;fit=crop"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">M&amp;A Global</span>
+<span class="w-1 h-1 rounded-full bg-on-surface-variant/30"></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Maio 2024</span>
+</div>
+<h2 class="font-headline-sm text-2xl text-on-surface mb-4 group-hover:text-secondary transition-colors leading-tight">Estruturação Tributária em Fusões Transfronteiriças na Europa.</h2>
+<a class="font-label-caps text-xs text-secondary uppercase tracking-widest hover:underline" href="#">Ler Artigo Completo</a>
+</article>
+<article class="group cursor-pointer">
+<div class="w-full h-64 bg-surface-container-high mb-6 overflow-hidden">
+<img alt="Tech" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&amp;w=2112&amp;auto=format&amp;fit=crop"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Direito Digital</span>
+<span class="w-1 h-1 rounded-full bg-on-surface-variant/30"></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Abril 2024</span>
+</div>
+<h2 class="font-headline-sm text-2xl text-on-surface mb-4 group-hover:text-secondary transition-colors leading-tight">Impactos da Inteligência Artificial na Propriedade Intelectual.</h2>
+<a class="font-label-caps text-xs text-secondary uppercase tracking-widest hover:underline" href="#">Ler Artigo Completo</a>
+</article>
+<article class="group cursor-pointer">
+<div class="w-full h-64 bg-surface-container-high mb-6 overflow-hidden">
+<img alt="Finance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Gestão de Patrimônio</span>
+<span class="w-1 h-1 rounded-full bg-on-surface-variant/30"></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Março 2024</span>
+</div>
+<h2 class="font-headline-sm text-2xl text-on-surface mb-4 group-hover:text-secondary transition-colors leading-tight">Blindagem Patrimonial: Novos Entendimentos da Suprema Corte.</h2>
+<a class="font-label-caps text-xs text-secondary uppercase tracking-widest hover:underline" href="#">Ler Artigo Completo</a>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white border-t border-outline-variant mt-auto">
+<div class="flex flex-col gap-12 max-w-container-max mx-auto px-margin-desktop py-[60px]">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-sm">
+<div class="font-headline-md text-headline-sm text-primary mb-4 font-bold flex items-center gap-3">
+<div class="w-4 h-4 bg-accent-electric rounded-sm"></div>
+                        VASCONCELOS &amp; PRADO
+                    </div>
+<p class="font-body-md text-sm text-secondary bg-surface-container p-4 rounded-md border border-outline-variant/50">
+                        Escritório Boutique especializado em consultoria jurídica estratégica e proteção de legados transnacionais.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-[11px] text-accent-terracotta uppercase font-bold tracking-widest">London</span>
+<p class="text-primary text-sm font-medium">45 Berkeley Square<br/><span class="text-secondary font-normal">Mayfair, London W1J 5AS</span></p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-[11px] text-accent-electric uppercase font-bold tracking-widest">São Paulo</span>
+<p class="text-primary text-sm font-medium">Av. Brig. Faria Lima<br/><span class="text-secondary font-normal">Itaim Bibi, SP</span></p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-[11px] text-primary uppercase font-bold tracking-widest">New York</span>
+<p class="text-primary text-sm font-medium">30 Rockefeller Plaza<br/><span class="text-secondary font-normal">NY 10112</span></p>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-outline-variant"></div>
+<div class="flex flex-col md:flex-row justify-between gap-6 items-center">
+<p class="font-body-md text-xs text-secondary text-center md:text-left">
+                    © 2024 Vasconcelos &amp; Prado Advogados. Todos os Direitos Reservados. Regulado pela Autoridade de Advocacia Global.
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-secondary hover:text-accent-electric transition-colors font-label-caps text-[10px] uppercase tracking-widest font-bold" href="index.html">Política de Privacidade</a>
+<a class="text-secondary hover:text-accent-electric transition-colors font-label-caps text-[10px] uppercase tracking-widest font-bold" href="index.html">Termos de Compromisso</a>
+<a class="text-secondary hover:text-accent-electric transition-colors font-label-caps text-[10px] uppercase tracking-widest font-bold" href="index.html">Aviso Regulatório</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8', 'ease-out');
+            observer.observe(section);
+        });
+    </script>
+<!-- Mobile Bottom Navigation (App-Like) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-[100] bg-surface/95 backdrop-blur-md border-t border-outline/20 px-4 py-3 flex justify-between items-center shadow-[0_-10px_40px_rgba(0,0,0,0.15)]">
+<a class="flex flex-col items-center gap-1 text-on-surface/50 hover:text-primary transition-colors w-[20%] !mb-0 !border-none !pb-0" href="index.html" style="text-decoration:none;">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-caps text-[9px] uppercase tracking-wider">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/50 hover:text-primary transition-colors w-[20%] !mb-0 !border-none !pb-0" href="practice.html" style="text-decoration:none;">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+<span class="font-label-caps text-[9px] uppercase tracking-wider">Áreas</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/50 hover:text-primary transition-colors w-[20%] !mb-0 !border-none !pb-0" href="philosophy.html" style="text-decoration:none;">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+<span class="font-label-caps text-[9px] uppercase tracking-wider">Perfil</span>
+</a>
+<a class="flex flex-col items-center gap-1 w-[30%] !mb-0 !border-none !pb-0" href="mailto:contato@vasconcelosprado.adv.br" style="text-decoration:none;">
+<div class="bg-primary text-on-primary w-full py-2 rounded-lg flex flex-col items-center justify-center shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px] mb-0.5">calendar_month</span>
+<span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">Consulta</span>
+</div>
+</a>
+</nav>
+</body></html>
